@@ -1,0 +1,30 @@
+一、QAbstractButton按钮的基类
+   常见的按钮包括:QPushButton,QToolButton,QRadioButton和QCheckBox,这些按钮都继承自QAbstractButton。
+   常见的状态
+   isDown()      提示按钮是否被按下
+   isChecked()   提示按钮是否已经标记
+   isEnable()    是否可以被编辑
+   isCheckAble() 提示按钮是否为可标记的
+   setAutoRepeat() 设置按钮是否在用户长按时可以自动重复执行
+
+   常见的信号
+   Pressed       当鼠标指针在按钮上并按下左键时触发的信号
+   Released      当鼠标左键被释放时触发的信号
+   Clicked       当鼠标左键被按下然后释放时，或者快捷键被释放时触发的信号
+   Toggled       当按钮的标记状态发生变化触发的信号
+二、QPushButton
+   常用方法
+   setCheckable()    设置按钮是否已经被选中，如果设置True，则表示按钮将保持一点击和释放状态
+   toggle()          在按钮状态之间进行切换
+   setIcon()         设置按钮上的图表
+   setEnable()       设置按钮是否可以使用
+   isChecked()       返回按钮的状态
+   setText()         设置按钮的显示文本
+   text()            返回按钮的显示文本
+
+   为QPushButton设置快捷建
+   规则：Alt+D 则在按钮的名字中带有D的字母前面加上&
+   &Dddd   &&D  D下降不显示下划线
+三、QRadioButton
+   提供可供选择的按钮和文本标签，用户可以选择其中一个选项，标签用于显示对应的文本信息。单选按钮时一种开关按钮
+   可以切换On或者Off,主要是为用户提供多选一的选择
