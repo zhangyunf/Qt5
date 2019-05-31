@@ -28,3 +28,49 @@
 三、QRadioButton
    提供可供选择的按钮和文本标签，用户可以选择其中一个选项，标签用于显示对应的文本信息。单选按钮时一种开关按钮
    可以切换On或者Off,主要是为用户提供多选一的选择
+四、QComboBox下拉列表框
+   addItem()          添加一个下拉选项
+   addItems()         从列表中添加下拉选项
+   Clear()            删除下拉选项集合中的所有选项
+   count()            返回下拉选项集合中的数目
+   currentText()      返回选中选项的文本
+   itemText(i)        获取索引为i的item的选项文本
+   currentIndex()     返回选中项的索引
+   setItemText(int index,text)   改变序号为index项的文本
+
+   信号
+   Activated          当用户选中一个下拉选项时发射该信号
+   currentIndexChanged      当下拉选项的索引发生改变时发射该信号
+   highlighted              当选中一个已经选中的下拉选项时，发射该信号
+五、QSpinBox
+   方法
+   setMinimum()             设置计数器的下界
+   setMaximum()             设置计数器的上界
+   setRange()               设置计数器的最大值、最小值、步长
+   setValue()               设置计数器的当前值
+   Value()                  返回计数器的当前值
+   singleStep()             设置计数器的步长值
+六、QSlider滑动条
+   方法
+   setMinimum()             设置滑动条控件的最小值
+   setMaximum()             设置滑动条控件的最大值
+   setSingleStep()          设置滑动条控件递增、递减的步长值
+   setValue()               设置滑动条控件的值
+   value()                  获取滑动条的值
+   setTickInterval()        设置刻度间隔
+   setTickPosition()        设置刻度标记的位置，可以输入一个枚举值，这个枚举值指定刻度线相对于滑块和用户操作
+                            的位置。
+                            QSlider.NoTicks        不绘制任何刻度线
+                            QSlider.TicksBothSides 在滑块的两侧绘制刻度线
+                            QSlider.TicksAbove     在水平滑块上方绘制刻度线
+                            QSlider.TicksBelow     在水平滑块下方绘制刻度线
+                            QSlider.TicksLeft      在垂直滑块左侧绘制刻度线
+                            QSlider.TicksRight     在垂直滑块右侧绘制刻度线
+
+
+   信号
+   valueChanged             当滑块的值发生改变时发出的信号
+   sliderPressed            当用户按下滑块时发出的信号
+   sliderMoved              当用户拖动滑块时发出的信号
+   sliderReleased           当用户释放滑块时发出的信号
+
