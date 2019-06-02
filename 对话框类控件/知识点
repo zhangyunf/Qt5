@@ -1,0 +1,54 @@
+一、QDialog
+   QDialog的子类有QMessage、QColorDialog、QFileDialog、QFontDialog、QInputDialog
+   方法
+   setWindowTitle()        设置对话框标题
+   setWindowModality()     设置窗口模态
+                           Qt.NonModal      非模态，可以和程序的其他窗口交互
+                           Qt.WindowModal   窗口模态，程序在未处理完当前对话框时，将阻止对话框和父窗口交互
+                           Qt.ApplicationModal   应用程序模态，阻止和任何其他窗口交互
+二、QMessageBox弹出式对话框
+   方法
+   information(QWidget parent, title, text, buttons, defaultButton)       弹出消息对话框
+                                                                           parent  指定父类
+                                                                           title   对话框标题
+                                                                           text    对话框内容
+                                                                           buttons 多个标准标题
+                                                                           defaultButton  默认选中的标准按钮，默认是第一个标准按钮
+   question(QWidget parent, title, text, buttons, defaultButton)          弹出问答对话框
+   warning(QWidget parent, title, text, buttons, defaultButton)           弹出警告对话框
+   ctitical(QWidget parent, title, text, buttons, defaultButton)          弹出严重警告错误对话框
+   about (QWidget parent, title, text, buttons, defaultButton)            弹出关于对话框
+   setTitle()        设置标题
+   setText()         设置消息正文
+   setIcon()         设置图片
+
+   按钮
+   QMessage.Ok
+   QMessage.Cancel
+   QMessage.Yes
+   QMessage.No
+   QMessage.Abort  终止操作
+   QMessage.Retry  重试操作
+   QMessage.Ignore 忽略操作
+
+   常用的消息对话框
+   QMessageBox.information 消息对话框
+   QMessageBox.question
+   QMessageBox.warning
+   QMessageBox.critical   严重错误对话框
+   QMessageBox.about      关于对话框
+三、QInputDialog标准对话框
+   方法
+   getInt()    从控件中获得标准整数输入
+   getDouble() 从控件中获得标准浮点数输入
+   getText()   从控件中获得标准字符串输入
+   getItem()   从控件中获得列表里的选项输入
+四、QFileDialog打开和保存文件的标准对话框
+   getOpenFileName()    返回用户所选择文件的名称，并打开该文件
+   getSaveFileName()    使用用户选择的文件名并保存文件
+   setFileMode()        可以选择的文件类型
+                        QFileDialog.AnyFile          任何文件
+                        QFileDialog.ExistingFile     已存在的文件
+                        QFileDialog.Directory        文件目录
+                        QFileDialog.ExistingFiles    已经存在的多个文件
+   setFilter()          设置过滤器，只显示过滤器允许的文件类型
